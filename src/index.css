@@ -1,5 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 @import "tailwindcss";
 
 @theme {
-   
+   --color-accent: #fc4747;
+   --color-primary: #10141e;
+   --color-secondary: #161d2f;
+   --color-tertiary: #5a698f;
+   --color-white: #ffffff;
+
+   --font-sans: "Outfit", serif;
+   --text-base: 15px;
+   --text-2xl: 32px;
+   --text-xl: 24px;
+   --text-lg: 24px;
+   --text-md: 18px;
+   --text-xs: 13px;
+}
+
+@layer base {
+   body {
+      @apply bg-primary font-sans text-base font-light text-white;
+   }
+
+   h1,
+   h2,
+   h3,
+   h4 {
+      @apply leading-normal;
+   }
+
+   h1,
+   h2 {
+      @apply font-light;
+   }
+
+   h3,
+   h4 {
+      @apply font-medium;
+   }
+
+   h1 {
+      @apply text-2xl;
+   }
+
+   h2 {
+      @apply text-xl;
+   }
+
+   h3 {
+      @apply text-lg;
+   }
+
+   h4 {
+      @apply text-md;
+   }
+
+   p,
+   span {
+      @apply text-base font-light leading-normal;
+   }
 }
