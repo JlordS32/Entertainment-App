@@ -8,3 +8,16 @@ createRoot(document.getElementById("root")!).render(
         <App />
     </StrictMode>,
 )
+
+// Current tech stacK:
+// TailwindCSS
+// React
+// Vite
+// Typescript
+
+// Upcoming:
+// React Query
+// React Router
+// Firebase for Authentication
+// Firebase for Database
+// Docker

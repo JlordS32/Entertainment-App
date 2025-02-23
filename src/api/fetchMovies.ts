@@ -1,5 +1,5 @@
-export const fetchDiscoverMovies = async (): Promise<any> => {
-   const url = "https://api.themoviedb.org/3/discover/movie";
+export const fetchTrendingMovies = async (): Promise<any> => {
+   const url = "https://api.themoviedb.org/3/movie/popular";
    const response = await fetch(url, {
       method: "GET",
       headers: {

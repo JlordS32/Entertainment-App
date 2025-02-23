@@ -1,26 +1,17 @@
-import { useEffect, useState } from "react";
-import { fetchDiscoverMovies } from "./api/fetchMovies";
-import Card from "./components/Card";
+import Home from "./pages/Home";
+import Nav from "./components/Nav";
+
+// TODO: Read ReactQuery Docs and start implement ReactQuery
+// TODO: Install react router
+// TODO: Add page routes
+// TODO: Make the navigation
 
 const App = () => {
-   const [data, setData] = useState<any>();
-
-   useEffect(() => {
-      fetchDiscoverMovies()
-         .then((data) => setData(data))
-         .catch((error) => console.log(error));
-   }, []);
-
-   useEffect(() => {
-      console.log(data);
-   }, [data]);
-
    return (
-      <div className="bg-primary p-8 font-black text-white">
-         <div className="w-[500px]">
-            <Card />
-            <Card />
-            <Card />
+      <div className="flex">
+         <Nav />
+         <div className="pl-[150px] flex-1">
+            <Home />
          </div>
       </div>
    );

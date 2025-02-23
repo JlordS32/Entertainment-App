@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 
 type CardProps = {
+   imgUrl?: string;
    booked?: boolean;
 };
 
-const Card = ({ booked = false }: CardProps) => {
+const Card = ({ imgUrl, booked = false }: CardProps) => {
    const [isBookmarked, setIsBookmarked] = useState<boolean>(false);
 
    useEffect(() => {
@@ -15,7 +16,7 @@ const Card = ({ booked = false }: CardProps) => {
       <div className="card relative">
          <img
             className="h-full w-full"
-            src="./images/placeholder.png"
+            src={imgUrl || "./images/placeholder.jpg"}
             alt="Placeholder"
          />
          <div
