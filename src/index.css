@@ -100,6 +100,10 @@
    .btn {
       @apply bg-accent h-[48px] w-full cursor-pointer overflow-hidden rounded-md text-center duration-300 hover:scale-x-101 hover:bg-white hover:text-black active:scale-x-100;
    }
+
+   .card {
+      @apply h-[180px] w-[280px] rounded-lg overflow-hidden;
+   }
 }
 
 @layer utilities {
