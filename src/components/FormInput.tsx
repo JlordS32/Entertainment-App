@@ -1,5 +1,3 @@
-import { useRef } from "react";
-
 type FormInputProps = {
    placeholder?: string;
    type?: string;
