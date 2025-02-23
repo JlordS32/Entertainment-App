@@ -84,8 +84,9 @@
       @apply border-b-tertiary border-b-1 outline-none;
    }
 
-   .form-input, .form-input:valid {
-      @apply border-b-tertiary border-b-1 indent-4 outline-none relative;
+   .form-input,
+   .form-input:valid {
+      @apply border-b-tertiary relative border-b-1 indent-4 outline-none;
    }
 
    .form-input:focus {
@@ -94,6 +95,10 @@
 
    .form-input:invalid {
       @apply border-b-accent;
+   }
+
+   .btn {
+      @apply bg-accent h-[48px] w-full cursor-pointer overflow-hidden rounded-md text-center duration-300 hover:scale-x-101 hover:bg-white hover:text-black active:scale-x-100;
    }
 }
 

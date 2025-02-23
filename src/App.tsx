@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchDiscoverMovies } from "./api/fetchMovies";
 import Search from "./components/Search";
 import FormInput from "./components/FormInput";
+import Button from "./components/Button";
 
 const App = () => {
    const [data, setData] = useState<any>();
@@ -30,6 +31,9 @@ const App = () => {
                   errorMsg="Can't be empty"
                />
             </form>
+            <div className="mt-10">
+               <Button text="Login to your account"/>
+            </div>
          </div>
       </div>
    );
