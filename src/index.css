@@ -10,6 +10,7 @@
 
    --font-sans: "Outfit", serif;
    --text-base: 15px;
+   --spacing: 3.75px;
    --text-2xl: 32px;
    --text-xl: 24px;
    --text-lg: 24px;
@@ -57,6 +58,27 @@
 
    p,
    span {
-      @apply text-base font-light leading-normal;
+      @apply text-base leading-normal font-light;
+   }
+}
+
+@layer components {
+   .search-container {
+      @apply caret-accent flex gap-x-5 text-lg font-light w-full;
+   }
+
+   .search {
+      @apply pb-2 w-full;
+   }
+
+   .search:focus,
+   .search:active {
+      @apply border-b-tertiary border-b-1 outline-none;
+   }
+}
+
+@layer utilities {
+   .debug {
+      @apply outline-1 outline-red-500;
    }
 }
