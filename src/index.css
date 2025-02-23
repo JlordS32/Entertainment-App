@@ -10,7 +10,7 @@
 
    --font-sans: "Outfit", serif;
    --text-base: 15px;
-   --spacing: 3.75px;
+   --spacing: 4px;
    --text-2xl: 32px;
    --text-xl: 24px;
    --text-lg: 24px;
@@ -60,25 +60,46 @@
    span {
       @apply text-base leading-normal font-light;
    }
+
+   input:-webkit-autofill {
+      background-clip: text !important;
+      -webkit-box-shadow: 0 0 0px 1000px var(--color-primary) inset !important;
+      -webkit-text-fill-color: var(--color-white) !important;
+      transition: background-color 5000s ease-in-out 0s;
+   }
 }
 
 @layer components {
    .search-container {
-      @apply caret-accent flex gap-x-5 text-lg font-light w-full;
+      @apply flex w-full items-start gap-x-5 text-lg;
    }
 
-   .search {
-      @apply pb-2 w-full;
+   .search,
+   .form-input {
+      @apply caret-accent w-full pb-3 font-light;
    }
 
    .search:focus,
    .search:active {
       @apply border-b-tertiary border-b-1 outline-none;
    }
+
+   .form-input, .form-input:valid {
+      @apply border-b-tertiary border-b-1 indent-4 outline-none relative;
+   }
+
+   .form-input:focus {
+      @apply border-b-white bg-none;
+   }
+
+   .form-input:invalid {
+      @apply border-b-accent;
+   }
 }
 
 @layer utilities {
-   .debug {
+   .debug,
+   .debug > * {
       @apply outline-1 outline-red-500;
    }
 }
