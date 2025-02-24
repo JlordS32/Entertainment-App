@@ -8,9 +8,9 @@ import Header from "./components/Header";
 
 const App = () => {
    return (
-      <div className="flex">
+      <div className="flex flex-col relative">
          <Header />
-         {/* <Home /> */}
+         <Home />
       </div>
    );
 };
