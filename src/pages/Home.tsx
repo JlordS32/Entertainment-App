@@ -17,7 +17,7 @@ const Home = () => {
 
    return (
       <main>
-         <div className="grid w-full grid-cols-5 gap-4">
+         <div>
             {data && data.results ? (
                data.results.map((movie: any) => (
                   <Card

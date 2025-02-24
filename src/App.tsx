@@ -1,5 +1,5 @@
 import Home from "./pages/Home";
-import Nav from "./components/Nav";
+import Header from "./components/Header";
 
 // TODO: Read ReactQuery Docs and start implement ReactQuery
 // TODO: Install react router
@@ -9,10 +9,8 @@ import Nav from "./components/Nav";
 const App = () => {
    return (
       <div className="flex">
-         <Nav />
-         <div className="pl-[150px] flex-1">
-            <Home />
-         </div>
+         <Header />
+         {/* <Home /> */}
       </div>
    );
 };
